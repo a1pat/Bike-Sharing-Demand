@@ -15,7 +15,7 @@ Exploratory data analysis showed that:
   1. Variables in the `train` and `test` data sets were similarly distributed. This was not going to cause problems with modeling, with the exception described below;
   2. The exception was that the `test` data occurred at the end of the month whereas `train` data were from the beginning of the month. The training would not capture changes in customer spending habits, if any, that occurred at the end of the month;
   3. `season` and `weather` were initially read as integers from the `.csv` file. It made more sense for them to be used as categorical variables;
-  4. It also made sense for `hour`, `day` and `month` to be included as feature variables, as `count` showed definite cyclicality according to `day` and `month`.
+  4. It also made sense for `hour`, `day` and `month` to be included as feature variables, as `count` showed definite cyclicality according to `hour`, `day` and `month`.
 
 ### How much better did your model preform after adding additional features and why do you think that is?
 The model validation score (root mead ssquared error) improved from -114.74 to -36.42, while the Kaggle score of the test data predictions improved from 1.39412 to 0.50192. This was primarily because:
